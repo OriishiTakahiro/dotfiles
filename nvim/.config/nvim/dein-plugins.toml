@@ -1,0 +1,147 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'neomake/neomake'
+build = 'make'
+
+[[plugins]]
+repo = 'gosukiwi/vim-atom-dark'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#lsp#enabled = 0
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'airblade/vim-rooter'
+hook_add = '''
+let g:rooter_manual_only = 0
+let g:rooter_patterns = ['.git/']
+" ignore directories; all files
+let g:rooter_targets = '*'
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+hook_source = '''
+  imap <C-k> <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k> <Plug>(neosnippet_expand_target)
+  if has('conceal')
+    set conceallevel=2 concealcursor=niv
+  endif
+'''
+on_i  = 1
+depends = ['neosnippet-snippets']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_source = '''
+  let g:deoplete#enable_at_startup = 1
+  inoremap <expr><tab> pumvisible() ? "\<C-n>" :
+        \ neosnippet#expandable_or_jumpable() ?
+        \    "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
+'''
+hook_add = '''
+  call deoplete#custom#option('enable_at_startup', 1)
+  call deoplete#custom#option('auto_complete_delay', 0)
+  call deoplete#custom#option('auto_complete_start_length', 1)
+  call deoplete#custom#option('enable_refresh_always', 0)
+  call deoplete#custom#option('enable_buffer_path', 1)
+  call deoplete#custom#option('max_list', 10000)
+'''
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'Shougo/unite.vim' 
+
+[[plugins]]
+repo = 'Shougo/denite.nvim' 
+
+[[plugins]]
+repo = 'Shougo/vimfiler'
+hook_add = '''
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_tree_leaf_icon = "⋮"
+let g:vimfiler_tree_opened_icon = "▼"
+let g:vimfiler_tree_closed_icon = "▷"
+noremap :tree :VimFiler -split -simple -winwidth=25 -no-quit
+nnoremap <silent> <Leader>z :<C-u>VimFilerBufferDir -split -simple -winwidth=25 -toggle -no-quit<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neossh.vim'
+hook_add = '''
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+let g:indentLine_color_term = 239
+autocmd BufNewFile,BufRead *.tex let g:indentLine_enabled=0
+autocmd BufNewFile,BufRead *.json let g:indentLine_enabled=0
+'''
+
+[[plugins]] # git wrapper
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] # show 'git diff' at left side
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'kshenoy/vim-signature'
+
+[[plugins]]
+repo = 'kien/ctrlp.vim'
+hook_add = '''
+nnoremap <C-f> :CtrlP<CR>
+'''
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+depends = ['kien/ctrlp.vim']
+hook_add = '''
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap gp <Plug>(yankround-gp)
+nmap gP <Plug>(yankround-gP)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+'''
+
+# for LSP Server ------------------
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+let g:lsp_auto_enable = 1
+'''
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'

@@ -1,0 +1,10 @@
+# Appearance
+window:
+  decorations: None
+colors:
+   # Colors (IceBerg)
+   primary:
+     background: '0x0f1117' # base03
+     foreground: '0x818596' # base0
+
+background_opacity: 0.90
