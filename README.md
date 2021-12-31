@@ -1,6 +1,6 @@
 # dotfiles
 
-my dotfiles managed by Gnu stow
+my dotfiles managed by Gnu stow.
 
 ## Usage
 
@@ -9,9 +9,22 @@ my dotfiles managed by Gnu stow
 1. `cd /path/to/this/directory`
 1. `./setup.sh`
 
+### HomeBrew
+
+install & upgrade tools.
+
+```sh
+$ cd ~/.config/homebrew
+$ brew bundle
+```
+
+### Neovim
+
+install [dein](https://github.com/Shougo/dein.vim) and execute `nvim` command.
+
 ## Tools
 
-manage dotfiles for following tools
+manage dotfiles for following tools.
 
 - [alacritty](https://github.com/alacritty/alacritty)
 - [karabiner](https://karabiner-elements.pqrs.org/)
