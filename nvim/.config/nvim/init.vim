@@ -9,9 +9,9 @@ let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_dir = s:cache_home . '/dein'
 let g:vimfiler_as_default_explorer = 1
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-	let s:toml = '~/.config/nvim/dein-plugins.toml'
-	let s:toml_lazy = '~/.config/nvim/dein-lazy-plugins.toml'
-	let s:toml_darwin = '~/.config/nvim/dein-darwin-plugins.toml'
+let s:toml = '~/.config/nvim/dein-plugins.toml'
+let s:toml_lazy = '~/.config/nvim/dein-lazy-plugins.toml'
+let s:toml_darwin = '~/.config/nvim/dein-darwin-plugins.toml'
 
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))

@@ -66,8 +66,8 @@ function rprompt-git-current-branch {
 }
 
 # PROMPT="%/%% "
-PROMPT="%B%F{111}${HOST}: %~%f%b
-%F{040}${USER}%f%B%F{041} %(?,%F{040}>>%f,%F{red}>>%f)%b "	# prompt for leftside
+PROMPT="%B%F{blue}${HOST}: %~%f%b
+%F{green}${USER}%f%B%F{green} %(?,%F{green}>>%f,%F{red}>>%f)%b "	# prompt for leftside
 RPROMPT='`rprompt-git-current-branch`'	# prompt for rightside
 SPROMPT="%r is correct? [n,y,a,e]: "	# prompt for miss-command
 

@@ -29,6 +29,7 @@ alias grep="grep --color=auto"
 alias vim="nvim"
 alias tf="terraform"
 alias cci="circleci"
+alias diff='colordiff -u'
 
 alias d="docker"
 alias dc="docker-compose"
@@ -76,3 +77,6 @@ path=($path $HOME/.jenv/bin(N-/))
 
 ### cabal ###
 path=($path $HOME/.cabal/bin(N-/))
+
+### pip ###
+path=($path $HOME/Library/Python/3.8/bin(N-/))

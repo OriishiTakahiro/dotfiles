@@ -36,3 +36,8 @@ brew "koekeishiya/formulae/yabai"
 brew "kind"
 brew "okteto"
 cask "aws-vault"
+brew "colordiff"
+brew "jq"
+brew "circleci"
+# kubernetes
+brew "FairwindsOps/tap/rbac-lookup"
