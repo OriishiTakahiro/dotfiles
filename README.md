@@ -11,6 +11,8 @@ My dotfiles managed by Gnu stow.
 
 ### Zsh
 
+Install [ZI](https://z-shell.pages.dev/docs/getting_started/installation).
+
 ```sh
 $ source ~/.zshrc
 $ source ~/.zshenv

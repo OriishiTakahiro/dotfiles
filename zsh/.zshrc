@@ -111,8 +111,8 @@ autoload -Uz _zinit
 
 ### End of Zinit's installer chunk
 
-zplugin ice wait '0'
-zplugin light "b4b4r07/enhancd"
+zi ice wait '0'
+zi light b4b4r07/enhancd
 
 #############################################
 #             for other tools               #
