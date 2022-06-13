@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = OriishiTakahiro
+	email = takahiro0914@live.jp
+[alias]
+	ci = commit -s
+	ca = commit --amend
+	ad = add
+	pl = pull
+	sw = switch
+	sc = switch -c
+	df = diff
+	st = status
+	br = branch
+  hash = rev-parse HEAD
+  stash = stash -u
+  stashl = stash list
+  stash-pop = stash apply stash@{0}
