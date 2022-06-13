@@ -39,5 +39,7 @@ cask "aws-vault"
 brew "colordiff"
 brew "jq"
 brew "circleci"
-# kubernetes
-brew "FairwindsOps/tap/rbac-lookup"
+brew "gnu-sed"
+# auto completion for kubectl, kubectx, kubens
+brew "fzf"
+brew "k6"

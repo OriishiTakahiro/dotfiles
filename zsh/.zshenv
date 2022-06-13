@@ -34,14 +34,19 @@ alias diff='colordiff -u'
 alias d="docker"
 alias dc="docker-compose"
 alias k="kubectl"
-alias kc="kubectx"
-alias kn="kubens"
 alias i="istioctl"
 
 alias g="git"
 alias gd='cd $(ghq root)/$(ghq list | peco)'
 # alias go='git remote -v | awk '/origin.*push/ {print $2}' | xargs open'
 alias sed='gsed'
+
+### aliases for krew commands
+alias kkc="kubectl ctx"
+alias kkn="kubectl ns"
+alias kkr="kubectl rbac-lookup"
+alias kks="kubectl stern"
+alias kks="kubectl stern"
 
 ### for avoid Mojibake in less ###
 export LESSCHARSET=utf-8
@@ -78,3 +83,6 @@ path=($path $HOME/.cabal/bin(N-/))
 
 ### pip ###
 path=($path $HOME/Library/Python/3.8/bin(N-/))
+
+### krew ###
+path=($path ${KREW_ROOT:-$HOME/.krew}/bin(N-/))

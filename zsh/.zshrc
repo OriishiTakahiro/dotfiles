@@ -65,6 +65,10 @@ function rprompt-git-current-branch {
   echo "${branch_status}[$branch_name]"
 }
 
+#############################################
+#               Setup prompt                #
+#############################################
+
 # PROMPT="%/%% "
 PROMPT="%B%F{blue}${HOST}: %~%f%b
 %F{green}${USER}%f%B%F{green} %(?,%F{green}>>%f,%F{red}>>%f)%b "	# prompt for leftside
@@ -87,26 +91,10 @@ bindkey '^R' peco-history-selection
 # setting for keybind
 bindkey -v										# for vim keybind
 
-
 #############################################
-#             for some tools                #
+#                   Zinit                   #
 #############################################
-
-### pyenv
-eval "$(pyenv init -)"
-
-### rbenv
-eval "$(rbenv init -)"
-
-### direnv
-if [ -x "`which direnv`" ]; then
-    eval "$(direnv hook zsh)"
-fi
-
-eval "$(scalaenv init -)"
-eval "$(sbtenv init -)"
-eval "$(jenv init -)"
-
+#
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -125,3 +113,22 @@ autoload -Uz _zinit
 
 zplugin ice wait '0'
 zplugin light "b4b4r07/enhancd"
+
+#############################################
+#             for other tools               #
+#############################################
+
+### direnv
+if [ -x "`which direnv`" ]; then
+    eval "$(direnv hook zsh)"
+fi
+
+### kubectl
+source "$HOME/.zsh/completion/kubectl"
+
+### runtime managers
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+eval "$(scalaenv init -)"
+eval "$(sbtenv init -)"
+eval "$(jenv init -)"

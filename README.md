@@ -1,6 +1,6 @@
 # dotfiles
 
-my dotfiles managed by Gnu stow.
+My dotfiles managed by Gnu stow.
 
 ## Usage
 
@@ -9,6 +9,13 @@ my dotfiles managed by Gnu stow.
 1. `cd /path/to/this/directory`
 1. `./setup.sh`
 
+### Zsh
+
+```sh
+$ source ~/.zshrc
+$ source ~/.zshenv
+```
+
 ### HomeBrew
 
 install & upgrade tools.
@@ -16,6 +23,18 @@ install & upgrade tools.
 ```sh
 $ cd ~/.config/homebrew
 $ brew bundle
+```
+
+### Krew
+
+install with [announced method](https://krew.sigs.k8s.io/docs/user-guide/setup/install/#bash).
+
+```sh
+# install krew plugins
+$ k krew install < ~/.config/krew/plugins
+
+# upgrade krew plugins
+$ k krew upgrade < ~/.config/krew/plugins
 ```
 
 ### Neovim
