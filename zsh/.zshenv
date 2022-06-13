@@ -42,11 +42,8 @@ alias gd='cd $(ghq root)/$(ghq list | peco)'
 alias sed='gsed'
 
 ### aliases for krew commands
-alias kkc="kubectl ctx"
-alias kkn="kubectl ns"
-alias kkr="kubectl rbac-lookup"
-alias kks="kubectl stern"
-alias kks="kubectl stern"
+alias kc="kubectl ctx | peco | xargs kubectl ctx"
+alias kn="kubectl ns | peco | xargs kubectl ns"
 
 ### for avoid Mojibake in less ###
 export LESSCHARSET=utf-8
