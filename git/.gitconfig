@@ -17,3 +17,5 @@
   stash = stash -u
   stashl = stash list
   stash-pop = stash apply stash@{0}
+[commit]
+	template = ~/.gitmessage

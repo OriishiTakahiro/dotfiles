@@ -35,6 +35,7 @@ alias d="docker"
 alias dc="docker-compose"
 alias k="kubectl"
 alias kc="kubectx"
+alias kn="kubens"
 alias i="istioctl"
 
 alias g="git"
@@ -44,9 +45,6 @@ alias sed='gsed'
 
 ### for avoid Mojibake in less ###
 export LESSCHARSET=utf-8
-
-### dmm-gw ###
-path=($path ~/.dmm-gw(N-/))
 
 ### docker ###
 fpath=($fpath ~/.zsh/completion(N-/))
