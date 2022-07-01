@@ -2,9 +2,8 @@
 if !&compatible
   set nocompatible               " Be iMproved
 endif
-
-au BufRead,BufNewFile *.tf set filetype=terraform
-
+ 
+let g:python_host_prog  = '/usr/bin/python3'
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_dir = s:cache_home . '/dein'
 let g:vimfiler_as_default_explorer = 1
@@ -77,6 +76,8 @@ set pumblend=10
 autocmd FileType go setlocal noexpandtab
 autocmd FileType go setlocal tabstop=2
 autocmd FileType go setlocal shiftwidth=4
+
+" terraform
 
 colorscheme iceberg
 set background=dark
