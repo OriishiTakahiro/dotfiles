@@ -43,6 +43,24 @@ $ k krew upgrade < ~/.config/krew/plugins
 
 install [dein](https://github.com/Shougo/dein.vim) and execute `nvim` command.
 
+```sh
+$ pip3 install neovim
+```
+
+Open vim and execute following command
+
+```
+:UpdateRemotePlugins
+```
+
+### Setup
+
+
+```sh
+$ brew services start yabai
+$ brew services start skhd
+```
+
 ## Tools
 
 manage dotfiles for following tools.

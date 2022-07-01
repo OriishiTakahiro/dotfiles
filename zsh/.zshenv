@@ -1,20 +1,3 @@
-export LANG="ja_JP.UTF-8"
-
-export EDITOR=vim
-
-# 履歴ファイルの保存先
-export HISTFILE=${HOME}/.zsh_history
-
-# メモリに保存される履歴の件数
-export HISTSIZE=1000
-
-# 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
-
-### for Neovim ###
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-
 ### aliases ###
 alias rm="rm -i"
 alias mv="mv -i"
@@ -41,9 +24,32 @@ alias gd='cd $(ghq root)/$(ghq list | peco)'
 # alias go='git remote -v | awk '/origin.*push/ {print $2}' | xargs open'
 alias sed='gsed'
 
+alias ava='aws-vault exec aidemy-lab'
+alias avz='aws-vault exec zeon-dmp'
+
 ### aliases for krew commands
 alias kc="kubectl ctx | peco | xargs kubectl ctx"
 alias kn="kubectl ns | peco | xargs kubectl ns"
+
+### Support for M1 Mac
+source "$HOME/.m1_env"
+
+export LANG="ja_JP.UTF-8"
+
+export EDITOR=vim
+
+# 履歴ファイルの保存先
+export HISTFILE=${HOME}/.zsh_history
+
+# メモリに保存される履歴の件数
+export HISTSIZE=1000
+
+# 履歴ファイルに保存される履歴の件数
+export SAVEHIST=100000
+
+### for Neovim ###
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 ### for avoid Mojibake in less ###
 export LESSCHARSET=utf-8
@@ -83,3 +89,6 @@ path=($path $HOME/Library/Python/3.8/bin(N-/))
 
 ### krew ###
 path=($path ${KREW_ROOT:-$HOME/.krew}/bin(N-/))
+
+### cargo ###
+path=($path $HOME/.cargo/bin(N-/))

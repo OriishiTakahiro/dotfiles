@@ -30,7 +30,7 @@ repo = 'vim-airline/vim-airline-themes'
 repo = 'airblade/vim-rooter'
 hook_add = '''
 let g:rooter_manual_only = 0
-let g:rooter_patterns = ['.git/']
+let g:rooter_patterns = ['.terraform/', '.git/']
 " ignore directories; all files
 let g:rooter_targets = '*'
 '''

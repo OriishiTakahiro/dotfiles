@@ -43,3 +43,6 @@ brew "gnu-sed"
 # auto completion for kubectl, kubectx, kubens
 brew "fzf"
 brew "k6"
+brew "kustomize"
+brew "rust"
+brew "gh"
