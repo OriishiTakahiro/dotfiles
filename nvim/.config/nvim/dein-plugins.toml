@@ -133,15 +133,70 @@ nmap <C-n> <Plug>(yankround-next)
 
 # for LSP Server ------------------
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = '0'
 hook_add = '''
-let g:lsp_auto_enable = 1
+let g:coc_global_extensions = [
+  \ 'coc-lists',
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-prettier',
+  \ 'coc-eslint',
+  \ ]
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
 '''
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete.vim'
-[[plugins]]
-repo = 'prabirshrestha/asyncomplete-lsp.vim'
+#'''
+#[[plugins]]
+#repo = 'prabirshrestha/vim-lsp'
+#hook_add = '''
+#let g:lsp_auto_enable = 1
+#let g:lsp_diagnostics_echo_cursor = 1
+#'''
+#[[plugins]]
+#repo = 'mattn/vim-lsp-settings'
+#hook_add = '''
+#let g:lsp_settings = {
+#\  'pylsp-all': {
+#\    'workspace_config': {
+#\      'pylsp': {
+#\        'configurationSources': ['flake8'],
+#\        'plugins': {
+#\          'flake8': {
+#\            'enabled': 1
+#\          },
+#\          'pylsp_mypy': {
+#\            'enabled': 1
+#\          },
+#\          'mccabe': {
+#\            'enabled': 0
+#\          },
+#\          'pycodestyle': {
+#\            'enabled': 0
+#\          },
+#\          'pyflakes': {
+#\            'enabled': 0
+#\          },
+#\        }
+#\      }
+#\    }
+#\  }
+#\}
+#'''
+#[[plugins]]
+#repo = 'prabirshrestha/async.vim'
+#[[plugins]]
+#repo = 'prabirshrestha/asyncomplete.vim'
+#[[plugins]]
+#repo = 'prabirshrestha/asyncomplete-lsp.vim'

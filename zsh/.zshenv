@@ -92,3 +92,4 @@ path=($path ${KREW_ROOT:-$HOME/.krew}/bin(N-/))
 
 ### cargo ###
 path=($path $HOME/.cargo/bin(N-/))
+. "$HOME/.cargo/env"
